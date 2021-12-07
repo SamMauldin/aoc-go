@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-func part1(depths []int) int {
+func day1part1(depths []int) int {
 	increases := 0
 
 	for i, v := range depths {
@@ -20,7 +20,7 @@ func part1(depths []int) int {
 	return increases
 }
 
-func part2(depths []int) int {
+func day1part2(depths []int) int {
 	increases := 0
 
 	for i, v := range depths {
@@ -32,7 +32,7 @@ func part2(depths []int) int {
 	return increases
 }
 
-func main() {
+func day1() {
 	content, err := ioutil.ReadFile(("day1.txt"))
 
 	if err != nil {
@@ -54,8 +54,9 @@ func main() {
 		depths[i] = depth
 	}
 
+	fmt.Println(("--- Day One ---"))
 	fmt.Println("-- Part 1 --")
-	fmt.Println(part1(depths))
+	fmt.Println(day1part1(depths))
 	fmt.Println("-- Part 2 --")
-	fmt.Println(part2(depths))
+	fmt.Println(day1part2(depths))
 }
